@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Главная</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta content="telephone=no" name="format-detection">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</html>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body class="page" id="body">
+    <!-- header-->
+    <header class="header page-header">
+        <div class="header__container container">
+            <a class="header__logo js-scroll-to" href="#body">
+                <img src="static/img/general/logo.svg" alt="">
+            </a>
+            <div class="header__actions">
+                <div class="menu header__menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"> <a class="menu__link js-scroll-to" href="#prtf">Портфолио</a>
+                        </li>
+                        <li class="menu__item"> <a class="menu__link js-scroll-to" href="#kitchen">Кухни</a>
+                        </li>
+                        <li class="menu__item"> <a class="menu__link js-scroll-to" href="#gard">Гардеробные</a>
+                        </li>
+                        <li class="menu__item"> <a class="menu__link js-scroll-to" href="#spal">Спальни</a>
+                        </li>
+                        <li class="menu__item"> <a class="menu__link js-scroll-to" href="#mebel">Офисная мебель</a>
+                        </li>
+                        <li class="menu__item"> <a class="menu__link js-scroll-to" href="#comp">О компании</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="socials header__socials">
+                    <ul class="socials__list">
+                        <li class="socials__item">
+                            <a class="socials__link" href="#">
+                                <img src="static/img/general/icons/1.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#">
+                                <img src="static/img/general/icons/2.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#">
+                                <img src="static/img/general/icons/3.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__contacts">
+                    <ul class="footer__list">
+                        <li class="footer__item"> <a class="footer__link" href="#">Республика Абхазия, г. Сухум, ул. Назадзе 1</a>
+                        </li>
+                        <li class="footer__item"> <a class="footer__link" href="mailto:furnioabh@mail.ru">furnioabh@mail.ru</a>
+                        </li>
+                        <li class="footer__item"> <a class="footer__link" href="tel:+79409679797">+7(940) 967-97-97</a><a class="footer__link" href="tel:+79407180119">+7(940) 718-01-19</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__mobile-btn"></div>
+        </div>
+    </header>
+    <!-- end header-->
+    <!-- promo-->
+    <div class="promo" id="prm">
+        <div class="promo__container container">
+            <div class="splide promo__splide js-promo-thumbs">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {% for slide in slide_list %}
+                        <li class="splide__slide">
+                            <div class="promo__data">
+                                <h1 class="promo__title">{{slide.title}}</h1>
+                                <div class="promo__caption">{{slide.description}}</div><a class="button promo__button" href="#">{{slide.button_text}}</a>
+                            </div>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+            <div class="splide promo__splide js-promo-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {% for slide in slide_list %}
+                        <li class="splide__slide">
+                            <img src="{{slide.image.url}}" alt="{{slide.title}}">
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end promo-->
+    <!-- advants-->
+    <div class="advants" id="adv">
+        <div class="advants__container container">
+            <div class="advants__grid">
+                <div class="advants__card">
+                    <img class="advants__icon" src="static/img/general/adv/1.svg" alt="">
+                    <div class="advants__data">
+                        <div class="advants__text">Мы первые</div>
+                        <div class="advants__label">Мы лидеры на рынке</div>
+                    </div>
+                </div>
+                <div class="advants__card">
+                    <img class="advants__icon" src="static/img/general/adv/2.svg" alt="">
+                    <div class="advants__data">
+                        <div class="advants__text">Лучшее качество</div>
+                        <div class="advants__label">Отвечаем за качество</div>
+                    </div>
+                </div>
+                <div class="advants__card">
+                    <img class="advants__icon" src="static/img/general/adv/3.svg" alt="">
+                    <div class="advants__data">
+                        <div class="advants__text">Короткие сроки</div>
+                        <div class="advants__label">Самые удобные сроки</div>
+                    </div>
+                </div>
+                <div class="advants__card">
+                    <img class="advants__icon" src="static/img/general/adv/4.svg" alt="">
+                    <div class="advants__data">
+                        <div class="advants__text">Всегда на связи</div>
+                        <div class="advants__label">Заявки 24/7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end advants-->
+    <!-- portfolio-->
+    <div class="portfolio" id="prtf">
+        <div class="portfolio__container container">
+            <div class="portfolio__inner">
+                <div class="portfolio__title">Портфолио</div>
+                <div class="portfolio__grid">
+                    <div class="portfolio__card">
+                        <div class="portfolio__photo">
+                            <img src="static/img/general/portf/1.jpg" alt="">
+                        </div>
+                        <div class="portfolio__data">
+                            <div class="portfolio__caption">Гостиная в стиле футуризм</div>
+                            <div class="portfolio__text">Максимум технического оснащения в сочетании с практичностью и функциональностью.</div><a class="button portfolio__button" href="#">подбробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__card">
+                        <div class="portfolio__photo">
+                            <img src="static/img/general/portf/2.jpg" alt="">
+                        </div>
+                        <div class="portfolio__data">
+                            <div class="portfolio__caption">Кухня в стиле Модерн</div>
+                            <div class="portfolio__text">Кухни модерн представляют собой современный стиль, отличающийся оригинальной пластикой отточенных линий, объемностью горизонтальных элементов, роскошеством декора без лишней мишуры.</div><a class="button portfolio__button"
+                            href="#">подбробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__card">
+                        <div class="portfolio__photo">
+                            <img src="static/img/general/portf/3.jpg" alt="">
+                        </div>
+                        <div class="portfolio__data">
+                            <div class="portfolio__caption">Спальня в стиле Прованс</div>
+                            <div class="portfolio__text">Весьма уютный и теплый стиль, который легко узнать по мягкой цветовой палитре, составленной преимущественно из пастельных оттенков.</div><a class="button portfolio__button" href="#">подбробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__card">
+                        <div class="portfolio__photo">
+                            <img src="static/img/general/portf/4.jpg" alt="">
+                        </div>
+                        <div class="portfolio__data">
+                            <div class="portfolio__caption">Офисная мебель в стиле лофт</div>
+                            <div class="portfolio__text">Мебель в стиле лофт – это предметы в винтажном исполнении, гармонично дополняющие общую атмосферу.</div><a class="button portfolio__button" href="#">подбробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end portfolio-->
+    <!-- about-->
+    <div class="about" id="kitchen">
+        <div class="about__container container">
+            <div class="about__inner">
+                <div class="about__main">
+                    <div class="about__info">
+                        <div class="about__title">Кухни</div>
+                        <div class="about__caption">Кухня издавна считалась сердцем дома. Такой же статус ей приписывает и Фэн-шуй.</div><a class="button about__button" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="about__data">
+                    <div class="splide about__splide js-about-slider" data-interval="2000">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                {% for kitchen in kitchen_list %}
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="{{kitchen.image.url}}" alt="{{kitchen.title}}">
+                                        </div>
+                                        <div class="about-card__label">{{kitchen.title}}</div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="static/img/general/about/2.jpg" alt="">
+                                        </div>
+                                        <div class="about-card__label">Лофт</div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="static/img/general/about/3.jpg" alt="">
+                                        </div>
+                                        <div class="about-card__label">Лофт</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about-->
+    <!-- about-->
+    <div class="about is-dark" id="gard">
+        <div class="about__container container">
+            <div class="about__inner">
+                <div class="about__main">
+                    <div class="about__info">
+                        <div class="about__title">Гардеробные</div>
+                        <div class="about__caption">Гардеробная – специальное помещение для хранения вещей, приведения себя в порядок, поэтому соревноваться с ней не может ни один, даже самый лучший шкаф-купе.</div><a class="button about__button" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="about__data">
+                    <div class="splide about__splide js-about-slider" data-interval="3000">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                {% for wardrobe in wardrobe_list %}
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="{{wardrobe.image.url}}" alt="{{wardrobe.title}}">
+                                        </div>
+                                        <div class="about-card__label">{{wardrobe.title}}</div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="static/img/general/about/9.jpg" alt="">
+                                        </div>
+                                        <div class="about-card__label">Лофт</div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="static/img/general/about/3.jpg" alt="">
+                                        </div>
+                                        <div class="about-card__label">Лофт</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about-->
+    <!-- about-->
+    <div class="about" id="spal">
+        <div class="about__container container">
+            <div class="about__inner">
+                <div class="about__main">
+                    <div class="about__info">
+                        <div class="about__title">Спальни</div>
+                        <div class="about__caption">Спальня – это особый оазис комфорта, где так важно ощущать атмосферу уюта и спокойствия.</div><a class="button about__button" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="about__data">
+                    <div class="splide about__splide js-about-slider" data-interval="2000">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                {% for bedroom in bedroom_list %}
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="{{bedroom.image.url}}" alt="{{bedroom.title}}">
+                                        </div>
+                                        <div class="about-card__label">{{bedroom.title}}</div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="static/img/general/about/5.jpg" alt="">
+                                        </div>
+                                        <div class="about-card__label">Лофт</div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="static/img/general/about/3.jpg" alt="">
+                                        </div>
+                                        <div class="about-card__label">Лофт</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about-->
+    <!-- about-->
+    <div class="about is-dark" id="mebel">
+        <div class="about__container container">
+            <div class="about__inner">
+                <div class="about__main">
+                    <div class="about__info">
+                        <div class="about__title">Офисная мебель</div>
+                        <div class="about__caption">Сегодня офисная мебель является одной из главных инвестиций в успешное развитие бизнес-проект</div><a class="button about__button" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="about__data">
+                    <div class="splide about__splide js-about-slider" data-interval="3000">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                {% for furniture in furniture_list %}
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="{{furniture.image.url}}" alt="{{furniture.title}}">
+                                        </div>
+                                        <div class="about-card__label">{{furniture.title}}</div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="static/img/general/about/7.jpg" alt="">
+                                        </div>
+                                        <div class="about-card__label">Лофт</div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="about-card">
+                                        <div class="about-card__photo">
+                                            <img src="static/img/general/about/3.jpg" alt="">
+                                        </div>
+                                        <div class="about-card__label">Лофт</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about-->
+    <!-- company-->
+    <div class="company" id="comp">
+        <div class="company__container container">
+            <div class="company__inner">
+                <div class="company__title">О компании</div>
+                <div class="company__data">
+                    <ul class="company__list">
+                        <li class="company__item">Компания ООО «АРТ-МЕБЕЛЬ» - <strong>одно из крупнейших предприятий на территории Республики Абхазия</strong>, располагающее собственными производственными мощностями, включающее в себя изготовление мебели любой сложности, в зависимости
+                            от предпочтений клиента.</li>
+                        <li class="company__item">Нашей отличительной чертой является то, что <strong>мы сами изготавливаем фасады из МДФ, работаем со стеклом и металлом</strong>, то есть, обращаясь к нам вы можете быть уверены, что найдете здесь все необходимое для воплощения
+                            в жизнь ваших самых смелых идей.</li>
+                        <li class="company__item">На нашем производстве трудятся <strong>высококвалифицированные специалисты, которые полны идей и вдохновения</strong>. Они помогут создать Вам будущий интерьер и расширить границы комфорта.</li>
+                        <li class="company__item">Мы <strong>работаем по современной схеме</strong>, когда выезд дизайнера-замерщика осуществляется бесплатно и в удобное для вас время. Он поможет вычислить индивидуальные размеры помещения, на месте нарисует проект и рассчитает
+                            стоимость.</li>
+                        <li class="company__item">После согласования цены и всех деталей перед началом производства вносится предоплата в 70%, оставшаяся часть оплачивается после установки изделия. Доставка и сборка осуществляются бесплатно. Время изготовление зависит от сложности
+                            работ.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end company-->
+    <!-- gallery-->
+    <div class="gallery" id="gl">
+        <div class="gallery__header">
+            <div class="gallery__title">Коротко о нас</div>
+            <div class="gallery__caption">#Делаемкрасиво</div>
+        </div>
+        <div class="gallery__body">
+            <div class="splide gallery__splide js-gallery-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="splide__grid js-lightgallery">
+                                <div class="splide__left block">
+                                    <a class="splide__img i1" href="assets/img/general/gl/1.jpg">
+                                        <img src="static/img/general/gl/1.jpg" alt="">
+                                    </a>
+                                    <a class="splide__img i2" href="assets/img/general/gl/2.jpg">
+                                        <img src="static/img/general/gl/2.jpg" alt="">
+                                    </a>
+                                    <a class="splide__img i3" href="assets/img/general/gl/3.jpg">
+                                        <img src="static/img/general/gl/3.jpg" alt="">
+                                    </a>
+                                    <a class="splide__img i4" href="assets/img/general/gl/4.jpg">
+                                        <img src="static/img/general/gl/4.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="splide__center block">
+                                    <a class="splide__img i5" href="assets/img/general/gl/5.jpg">
+                                        <img src="static/img/general/gl/5.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="splide__right block">
+                                    <a class="splide__img i6" href="assets/img/general/gl/6.jpg">
+                                        <img src="static/img/general/gl/6.jpg" alt="">
+                                    </a>
+                                    <a class="splide__img i7" href="assets/img/general/gl/7.jpg">
+                                        <img src="static/img/general/gl/8.jpg" alt="">
+                                    </a>
+                                    <a class="splide__img i8" href="assets/img/general/gl/8.jpg">
+                                        <img src="static/img/general/gl/7.jpg" alt="">
+                                    </a>
+                                    <a class="splide__img i9" href="assets/img/general/gl/9.jpg">
+                                        <img src="static/img/general/gl/9.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end gallery-->
+    <!-- footer-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__left">
+                <a class="footer__logo js-scroll-to" href="#body">
+                    <img src="static/img/general/f-logo.svg" alt="">
+                </a>
+                <div class="footer__caption">одно из крупнейших предприятий на территории Республики Абхазия</div>
+                <div class="footer__studio">Разработка сайта: <a href="#">Басария Нарт</a>
+                </div>
+            </div>
+            <div class="footer__right">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <div class="footer__title">контакты</div>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <div class="footer__link">ООО «АРТ-МЕБЕЛЬ»</div>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link" href="#">Республика Абхазия, г. Сухум, ул. Назадзе 1</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link" href="mailto:furnioabh@mail.ru">furnioabh@mail.ru</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link" href="tel:+79409679797">+7(940) 967-97-97 </a><a class="footer__link" href="tel:+79407180119">+7(940) 718-01-19</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__title">меню</div>
+                        <ul class="footer__list">
+                            <li class="footer__item"> <a class="footer__link js-scroll-to" href="#prtf">Портфолио</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link js-scroll-to" href="#kitchen">Кухни</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link js-scroll-to" href="#gard">Гардеробные</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link js-scroll-to" href="#spal">Спальни</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link js-scroll-to" href="#mebel">Офисная мебель</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link js-scroll-to" href="#comp">О компании</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__title">соцсети</div>
+                        <ul class="footer__list">
+                            <li class="footer__item"> <a class="footer__link" href="#">Instagram</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link" href="#">Facebook</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link" href="#">Telegram</a>
+                            </li>
+                            <li class="footer__item"> <a class="footer__link" href="#">YouTube</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer-->
+</body>
+<script src="static/js/main.min.js"></script>
