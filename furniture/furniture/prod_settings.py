@@ -13,7 +13,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql.psycopg2',
         'NAME': 'furniture',
-        'USER': 'postgres',
+        'USER': 'denis',
         'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '5432',
