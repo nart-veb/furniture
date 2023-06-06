@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-
+CSRF_TRUSTED_ORIGINS = ['http://185.119.57.72', 'https://art-mebel-abh.com']
 
 # Application definition
 
