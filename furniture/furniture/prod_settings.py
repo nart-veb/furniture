@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure21w3-z$#k==ur@0_21j@l&r3fsajpx+bfrus!(8u*el-*9q9&xf
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '185.119.57.72']
+ALLOWED_HOSTS = ['127.0.0.1', '185.119.57.72', 'art-mebel-abh.com' ]
 
 DATABASES = {
     'default': {
